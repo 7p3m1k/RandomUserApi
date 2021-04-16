@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		172471AD262949D50000DCF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172471AC262949D50000DCF5 /* Preview Assets.xcassets */; };
 		172471AF262949D50000DCF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172471AE262949D50000DCF5 /* Persistence.swift */; };
 		172471B2262949D50000DCF5 /* RandomUserApi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 172471B0262949D50000DCF5 /* RandomUserApi.xcdatamodeld */; };
+		172471BC262955F00000DCF5 /* ProfileImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172471BB262955F00000DCF5 /* ProfileImgView.swift */; };
+		172471C1262956F40000DCF5 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 172471C0262956F40000DCF5 /* URLImage */; };
+		172471C426295DA80000DCF5 /* RandomUserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172471C326295DA80000DCF5 /* RandomUserRowView.swift */; };
+		172471C8262967E90000DCF5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 172471C7262967E90000DCF5 /* Alamofire */; };
+		172471CC262969380000DCF5 /* RandomUser+ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172471CB262969380000DCF5 /* RandomUser+ResponseData.swift */; };
+		172471D026296E970000DCF5 /* RandomUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172471CF26296E970000DCF5 /* RandomUserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		172471AE262949D50000DCF5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		172471B1262949D50000DCF5 /* RandomUserApi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RandomUserApi.xcdatamodel; sourceTree = "<group>"; };
 		172471B3262949D50000DCF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172471BB262955F00000DCF5 /* ProfileImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImgView.swift; sourceTree = "<group>"; };
+		172471C326295DA80000DCF5 /* RandomUserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserRowView.swift; sourceTree = "<group>"; };
+		172471CB262969380000DCF5 /* RandomUser+ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RandomUser+ResponseData.swift"; sourceTree = "<group>"; };
+		172471CF26296E970000DCF5 /* RandomUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172471C1262956F40000DCF5 /* URLImage in Frameworks */,
+				172471C8262967E90000DCF5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,8 @@
 		172471A4262949D40000DCF5 /* RandomUserApi */ = {
 			isa = PBXGroup;
 			children = (
+				172471CA2629691C0000DCF5 /* Data */,
+				172471BA262949DF0000DCF5 /* UI */,
 				172471A5262949D40000DCF5 /* RandomUserApiApp.swift */,
 				172471A7262949D40000DCF5 /* ContentView.swift */,
 				172471A9262949D50000DCF5 /* Assets.xcassets */,
@@ -75,6 +89,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		172471BA262949DF0000DCF5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				172471BB262955F00000DCF5 /* ProfileImgView.swift */,
+				172471C326295DA80000DCF5 /* RandomUserRowView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		172471CA2629691C0000DCF5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				172471CB262969380000DCF5 /* RandomUser+ResponseData.swift */,
+				172471CF26296E970000DCF5 /* RandomUserViewModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +123,10 @@
 			dependencies = (
 			);
 			name = RandomUserApi;
+			packageProductDependencies = (
+				172471C0262956F40000DCF5 /* URLImage */,
+				172471C7262967E90000DCF5 /* Alamofire */,
+			);
 			productName = RandomUserApi;
 			productReference = 172471A2262949D40000DCF5 /* RandomUserApi.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +154,10 @@
 				Base,
 			);
 			mainGroup = 17247199262949D40000DCF5;
+			packageReferences = (
+				172471BF262956F40000DCF5 /* XCRemoteSwiftPackageReference "url-image" */,
+				172471C6262967E90000DCF5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 172471A3262949D40000DCF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,10 +184,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172471D026296E970000DCF5 /* RandomUserViewModel.swift in Sources */,
 				172471B2262949D50000DCF5 /* RandomUserApi.xcdatamodeld in Sources */,
+				172471BC262955F00000DCF5 /* ProfileImgView.swift in Sources */,
 				172471AF262949D50000DCF5 /* Persistence.swift in Sources */,
+				172471CC262969380000DCF5 /* RandomUser+ResponseData.swift in Sources */,
 				172471A8262949D40000DCF5 /* ContentView.swift in Sources */,
 				172471A6262949D40000DCF5 /* RandomUserApiApp.swift in Sources */,
+				172471C426295DA80000DCF5 /* RandomUserRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		172471BF262956F40000DCF5 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+		172471C6262967E90000DCF5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		172471C0262956F40000DCF5 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172471BF262956F40000DCF5 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		172471C7262967E90000DCF5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172471C6262967E90000DCF5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		172471B0262949D50000DCF5 /* RandomUserApi.xcdatamodeld */ = {
